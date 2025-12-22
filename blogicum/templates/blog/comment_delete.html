@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Удалить комментарий{% endblock %}
+{% block content %}
+  <h1>Удалить комментарий</h1>
+  <p>{{ comment.text }}</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Удалить</button>
+  </form>
+{% endblock %}
