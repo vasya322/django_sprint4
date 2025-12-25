@@ -22,9 +22,8 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path(
-        "auth/registration/", RegistrationView.as_view(), name="registration"
-    ),
+    path("auth/registration/",
+         RegistrationView.as_view(), name="registration"),
     path("admin/", admin.site.urls),
     path("auth/", include("django.contrib.auth.urls")),  # добавляем эту строку
     path("", include("blog.urls", namespace="blog")),

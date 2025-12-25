@@ -94,8 +94,7 @@ class Post(models.Model):
     )
     created_at = models.DateTimeField("Добавлено", auto_now_add=True)
     image = models.ImageField(
-        "Изображение", upload_to="posts_images/", blank=True
-    )
+        "Изображение", upload_to="posts_images/", blank=True)
 
     class Meta:
         verbose_name = "публикация"

@@ -117,8 +117,7 @@ def post_detail(request, pk):
 
 def category_posts(request, category_slug):
     category = get_object_or_404(
-        Category, slug=category_slug, is_published=True
-    )
+        Category, slug=category_slug, is_published=True)
 
     qs = (
         Post.objects.select_related("category", "location", "author")
@@ -185,9 +184,8 @@ def edit_comment(request, pk, comment_id):
     else:
         form = CommentForm(instance=comment)
 
-    return render(
-        request, "blog/comment.html", {"form": form, "comment": comment}
-    )
+    return render(request, "blog/comment.html",
+                  {"form": form, "comment": comment})
 
 
 @login_required

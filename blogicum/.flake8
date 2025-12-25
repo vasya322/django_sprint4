@@ -1,0 +1,8 @@
+[flake8]
+exclude =
+    venv,
+    .venv,
+    env,
+    .env,
+    **/site-packages/**,
+    **/migrations/**
